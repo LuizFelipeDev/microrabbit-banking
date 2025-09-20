@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventsHandlers\" />
+    <Compile Remove="EventsHandlers\**" />
+    <EmbeddedResource Remove="EventsHandlers\**" />
+    <None Remove="EventsHandlers\**" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EventHandlers\" />
   </ItemGroup>
 
 </Project>
