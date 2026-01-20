@@ -22,7 +22,7 @@ namespace MicroRabbit.Banking.Domain.CommandHandlers
         public Task<bool> Handle(CreateTransferCommand request, CancellationToken cancellationToken)
         {
             //public event to RabbitMQ
-            _bus.Publish(new TransferCreatedEvent(request.From, request.To, request.Amout));
+            _bus.Publish(new TransferCreatedEvent(request.From, request.To, request.Amount));
             return Task.FromResult(true);
         }
     }
